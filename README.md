@@ -1,54 +1,49 @@
-# React + TypeScript + Vite
+# TourZone (тестовый дашборд)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Проект-дашборд, созданный с использованием React, TypeScript, Redux Toolkit и ApexCharts.
 
-Currently, two official plugins are available:
+## Описание проекта
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+**TourZone** — интерфейс для визуализации и анализа бронирований туров.  
+Включает графики, фильтрацию по параметрам и таблицу с экспортом данных.  
+Использует моковые данные через json-server.
 
-## Expanding the ESLint configuration
+## ⚙️ Установка и запуск
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+1. Клонировать репозиторий:
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+```bash
+git clone https://github.com/nurillo26/tourzonetest.git
+cd tourzonetest
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+2. Установить зависимости:
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
+```bash
+npm install
 ```
+
+3. Запустить клиентскую часть:
+
+```bash
+npm run dev
+```
+
+4. Запустить сервер json-server (для получения моковых данных):
+
+```bash
+npm run json-server
+```
+
+## Технологии
+
+- **Frontend**
+
+  - React + Vite
+  - TypeScript
+  - Redux Toolkit
+  - ApexCharts
+
+- **API**
+
+  - json-server (для моковых данных)
